@@ -275,10 +275,10 @@ footer .warn { border: 1px solid var(--line); padding: 12px 14px; background: va
           <h3>제주그래퍼가 직접 촬영</h3>
           <div class="price">400,000원~ <small>/ 촬영 + 편당 50,000원</small></div>
           <ul>
-            <li>드론·FPV·지상·360°·야간·특수 촬영을 현장에서 직접</li>
+            <li>기본 촬영에 필요하면 드론·360°까지 함께 담습니다</li>
+            <li>고난이도 드론·야간·특수 촬영·3D만 추가 비용</li>
             <li>한 번 찍어 여러 편으로 — 편수가 늘수록 유리</li>
-            <li>촬영비는 제주그래퍼 기준가를 그대로 적용</li>
-            <li>날씨가 나쁘면 일정을 다시 잡습니다</li>
+            <li>장소에 따라 드론 촬영이 안 되거나 허가에 시간이 걸릴 수 있습니다</li>
           </ul>
         </div>
         <div>
@@ -318,29 +318,25 @@ footer .warn { border: 1px solid var(--line); padding: 12px 14px; background: va
       <div class="tbl-wrap"><table>
         <thead><tr><th>항목</th><th>내용</th><th>금액</th></tr></thead>
         <tbody>
-          <tr><td>반일 촬영</td><td>4시간 이내 · 지상</td><td class="num">400,000원</td></tr>
-          <tr><td>본격 촬영 1일</td><td>지상 · 인터뷰·제품</td><td class="num">600,000원</td></tr>
-          <tr><td>간이 드론 1일</td><td>소규모 현장 항공 촬영</td><td class="num">400,000원</td></tr>
-          <tr><td>FPV 드론 1일</td><td>좁은 공간·저공 추적 비행</td><td class="num">600,000원</td></tr>
-          <tr><td>시네마 드론 1일</td><td>고화질 항공 영상</td><td class="num">800,000원</td></tr>
-          <tr><td>360° VR</td><td>포인트당</td><td class="num">160,000원</td></tr>
-          <tr><td>비행 허가 대행</td><td>승인이 필요한 구역일 때 · 사이트당</td><td class="num">150,000원</td></tr>
+          <tr><td>반일 촬영</td><td>4시간 이내 · 지상 촬영 + 필요하면 드론·360° 포함</td><td class="num">400,000원</td></tr>
+          <tr><td>본격 촬영 1일</td><td>지상 촬영(공간·음식·인터뷰) + 필요하면 드론·360° 포함</td><td class="num">600,000원</td></tr>
+          <tr><td>비행 허가 대행</td><td>비행 승인이 필요한 장소일 때 · 장소당</td><td class="num">150,000원</td></tr>
         </tbody>
       </table></div>
+      <p class="example">드론 촬영은 장소에 따라 할 수 없거나(공항 주변·군사시설·일부 문화재 구역 등), 비행 승인을 받는 데 시간이 걸릴 수 있습니다. 의뢰를 확인할 때 가능 여부와 일정을 먼저 알려 드립니다.</p>
 
-      <p class="tbl-title">야간 · 특수 촬영 · 3D</p>
+      <p class="tbl-title">추가 기술이 필요할 때만</p>
       <div class="tbl-wrap"><table>
         <thead><tr><th>항목</th><th>내용</th><th>금액</th></tr></thead>
         <tbody>
-          <tr><td>초고해상도 360 사진</td><td>분할 촬영·합성·보정 포함 · 포인트당</td><td class="num">350,000원</td></tr>
-          <tr><td>360° VR 영상 편집</td><td>합성·안정화 포함</td><td class="num">600,000~1,500,000원</td></tr>
+          <tr><td>고난이도 드론</td><td>좁은 실내·골목 통과 비행(FPV), 저공 추적 등</td><td class="num">협의</td></tr>
           <tr><td>야간 촬영</td><td>야경·별·조명 연출 · 달·날씨에 맞춰 날짜 조정</td><td class="num">협의</td></tr>
           <tr><td>특수 촬영</td><td>멀티캠 동시 수록·추적 촬영 등</td><td class="num">협의</td></tr>
           <tr><td>3D 공간 (가우시안 스플래팅)</td><td>소형 스팟·공간 1곳</td><td class="num">4,000,000원</td></tr>
           <tr><td>3D 모델 (포토그래메트리)</td><td>단일 건축물 · 500㎡ 이하</td><td class="num">3,000,000원</td></tr>
         </tbody>
       </table></div>
-      <p class="example">예) 반일 촬영 + 20초 숏폼 5편 = 400,000 + 250,000 = <b>650,000원</b> (부가세 별도)</p>
+      <p class="example">예) 반일 촬영(드론 포함) + 20초 숏폼 5편 = 400,000 + 250,000 = <b>650,000원</b> (부가세 별도)</p>
 
       <ul class="terms">
         <li>자료 제작(A)은 의뢰 확인 후 안내드리는 금액을 입금하시면 바로 시작합니다.</li>
@@ -422,6 +418,7 @@ footer .warn { border: 1px solid var(--line); padding: 12px 14px; background: va
               <div class="field" id="shootBox" hidden>
                 <span class="label">촬영 종류</span>
                 <div class="shootlist" id="shoots"></div>
+                <span class="hint">드론은 장소에 따라 촬영이 안 되거나 비행 승인에 시간이 걸릴 수 있습니다. 확인 후 알려 드립니다.</span>
                 <label class="label" for="shootDate">촬영 희망 날짜·시간대</label>
                 <input type="text" id="shootDate" placeholder="예) 11월 둘째 주 평일 오전, 해 질 무렵">
               </div>
@@ -550,8 +547,10 @@ footer .warn { border: 1px solid var(--line); padding: 12px 14px; background: va
   const $ = (id) => document.getElementById(id);
   const won = (n) => Number(n || 0).toLocaleString("ko-KR") + "원";
   // 0 = 협의 항목 (예상 금액에 넣지 않고 확인 때 안내)
-  const SHOOT = { "반일 촬영": 400000, "본격 촬영 1일": 600000, "간이 드론 1일": 400000, "FPV 드론 1일": 600000, "시네마 드론 1일": 800000,
-    "360° VR 1포인트": 160000, "초고해상도 360 사진 1포인트": 350000, "야간 촬영": 0, "특수 촬영": 0, "3D 공간 제작": 0 };
+  // 기본 촬영(드론·360° 필요 시 포함) + 추가 기술(0 = 협의)
+  const SHOOT = { "반일 촬영 (드론·360° 포함)": 400000, "본격 촬영 1일 (드론·360° 포함)": 600000,
+    "고난이도 드론 (FPV·좁은 공간)": 0, "야간 촬영": 0, "특수 촬영": 0, "3D 공간 제작": 0 };
+  const BASE = ["반일 촬영 (드론·360° 포함)", "본격 촬영 1일 (드론·360° 포함)"];
   const PRICE_SHORT = 50000, PRICE_REV = 10000;
   const LABEL = { "접수": "접수됨", "견적안내": "금액 안내", "승인": "입금 확인 · 제작 대기", "촬영예정": "촬영 예정", "제작중": "제작 중", "검수중": "확인해 주세요", "수정중": "수정 중", "완료": "완료", "보류": "보류" };
   let pw = "", data = { requests: [], logs: [], uploads: [] }, role = "", client = "", limit = 5 * 1024 ** 3;
@@ -637,7 +636,7 @@ footer .warn { border: 1px solid var(--line); padding: 12px 14px; background: va
     st.classList.remove("err");
     const placeName = $("placeName").value.trim();
     if (!placeName) { st.textContent = "장소 이름을 적어 주세요."; st.classList.add("err"); $("placeName").focus(); return; }
-    if (service() === "B" && !shoots().length) { st.textContent = "촬영 종류를 하나 이상 골라 주세요."; st.classList.add("err"); return; }
+    if (service() === "B" && !shoots().some(x => BASE.includes(x))) { st.textContent = "반일 촬영 또는 1일 촬영을 골라 주세요."; st.classList.add("err"); return; }
     const payload = {
       service: service(), shoots: shoots(), shootDate: $("shootDate").value.trim(), count: Number($("count").value) || 1,
       placeName, region: $("region").value.trim(), placeType: radio("placeType"), links: lines($("links").value),
