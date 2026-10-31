@@ -65,7 +65,9 @@ nav a:hover::after{right:0}
 .dot{width:3px;height:3px;border-radius:50%;background:var(--terra);display:inline-block}
 /* reels cluster */
 .reels{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:end}
-.reel{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.14);display:grid;place-content:center}
+.reel{position:relative;aspect-ratio:9/16;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid rgba(255,255,255,.14);display:grid;place-content:center;transition:transform .28s,box-shadow .28s}
+.reel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+a.reel:hover{transform:translateY(-4px)}
 .reels .reel:nth-child(1){transform:translateY(20px)}
 .reels .reel:nth-child(3){transform:translateY(36px)}
 .reel::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(0,0,0,.42))}
@@ -97,11 +99,19 @@ section.band{padding:104px 0}
 /* work showcase */
 .work{background:var(--surface)}
 .work-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.work-grid .reel{box-shadow:0 24px 50px -36px rgba(19,38,62,.5);border:1px solid var(--line);transition:transform .28s,box-shadow .28s}
-.work-grid .reel:hover{transform:translateY(-6px);box-shadow:0 34px 60px -34px rgba(19,38,62,.6)}
-.work-note{margin:30px 0 0;font-size:13.5px;color:var(--muted)}
+.wcard{display:block;border-radius:16px;overflow:hidden;background:#fff;border:1px solid var(--line);box-shadow:0 20px 44px -34px rgba(19,38,62,.5);transition:transform .28s,box-shadow .28s}
+.wcard:hover{transform:translateY(-6px);box-shadow:0 34px 60px -32px rgba(19,38,62,.55)}
+.wthumb{position:relative;aspect-ratio:16/9;overflow:hidden;background:var(--navy)}
+.wthumb img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.wcard:hover .wthumb img{transform:scale(1.06)}
+.wthumb .play{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:48px;height:48px}
+.wbody{padding:15px 17px 18px}
+.wt{font-family:var(--display);font-size:17px;color:var(--navy);line-height:1.32}
+.wd{font-size:12.5px;color:var(--muted);margin-top:4px}
+.work-note{margin:34px 0 0;font-size:14px}
+.work-note a{color:var(--terra);font-weight:500}
 @media(max-width:860px){.work-grid{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:480px){.work-grid{grid-template-columns:repeat(2,1fr);gap:12px}}
+@media(max-width:480px){.work-grid{grid-template-columns:repeat(2,1fr);gap:14px}}
 
 /* process */
 .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
@@ -226,9 +236,9 @@ footer .in{display:grid;gap:10px}footer p{margin:0;max-width:62em}
         </div>
       </div>
       <div class="reels">
-        <div class="reel r1"><span class="play"></span><span class="reel-cap">브랜드 소개</span></div>
-        <div class="reel r2"><span class="play"></span><span class="reel-cap">공간 스케치</span></div>
-        <div class="reel r3"><span class="play"></span><span class="reel-cap">행사 하이라이트</span></div>
+        <a class="reel r1" href="https://youtu.be/ihgfKZY7Hfs" target="_blank" rel="noopener"><img loading="lazy" src="https://img.youtube.com/vi/ihgfKZY7Hfs/hqdefault.jpg" alt="가을에 놓다"><span class="play"></span><span class="reel-cap">가을에 놓다</span></a>
+        <a class="reel r2" href="https://youtu.be/AI7w-trKFQQ" target="_blank" rel="noopener"><img loading="lazy" src="https://img.youtube.com/vi/AI7w-trKFQQ/hqdefault.jpg" alt="혼자 온 제주"><span class="play"></span><span class="reel-cap">혼자 온 제주</span></a>
+        <a class="reel r3" href="https://youtu.be/MLaU5dq7J6o" target="_blank" rel="noopener"><img loading="lazy" src="https://img.youtube.com/vi/MLaU5dq7J6o/hqdefault.jpg" alt="바람이 말해줘"><span class="play"></span><span class="reel-cap">바람이 말해줘</span></a>
       </div>
     </div>
   </section>
@@ -249,16 +259,20 @@ footer .in{display:grid;gap:10px}footer p{margin:0;max-width:62em}
     <div class="in">
       <div class="sec-head">
         <div class="eyebrow">작업</div>
-        <h2>짧게, 그러나 정확하게.</h2>
-        <p>공간·브랜드·행사·소개 — 무엇이든 한 편의 세로 영상으로.</p>
+        <h2>지금까지 만든 영상.</h2>
+        <p>영상 한 편이 어떤 결로 나오는지, 작업으로 보여 드립니다. 눌러서 바로 보실 수 있어요.</p>
       </div>
       <div class="work-grid">
-        <div class="reel r2"><span class="play"></span><span class="reel-cap">공간</span></div>
-        <div class="reel r1"><span class="play"></span><span class="reel-cap">브랜드</span></div>
-        <div class="reel r3"><span class="play"></span><span class="reel-cap">행사</span></div>
-        <div class="reel r4"><span class="play"></span><span class="reel-cap">소개</span></div>
+        <a class="wcard" href="https://youtu.be/ihgfKZY7Hfs" target="_blank" rel="noopener"><div class="wthumb"><img loading="lazy" src="https://img.youtube.com/vi/ihgfKZY7Hfs/hqdefault.jpg" alt="가을에 놓다"><span class="play"></span></div><div class="wbody"><div class="wt">가을에 놓다</div><div class="wd">Progressive House</div></div></a>
+        <a class="wcard" href="https://youtu.be/MLaU5dq7J6o" target="_blank" rel="noopener"><div class="wthumb"><img loading="lazy" src="https://img.youtube.com/vi/MLaU5dq7J6o/hqdefault.jpg" alt="바람이 말해줘"><span class="play"></span></div><div class="wbody"><div class="wt">바람이 말해줘</div><div class="wd">90년대 팝 발라드</div></div></a>
+        <a class="wcard" href="https://youtu.be/2fgWcRZVNtI" target="_blank" rel="noopener"><div class="wthumb"><img loading="lazy" src="https://img.youtube.com/vi/2fgWcRZVNtI/hqdefault.jpg" alt="디지털 아리랑"><span class="play"></span></div><div class="wbody"><div class="wt">디지털 아리랑</div><div class="wd">K-Pop · 판소리 퓨전</div></div></a>
+        <a class="wcard" href="https://youtu.be/AI7w-trKFQQ" target="_blank" rel="noopener"><div class="wthumb"><img loading="lazy" src="https://img.youtube.com/vi/AI7w-trKFQQ/hqdefault.jpg" alt="혼자 온 제주"><span class="play"></span></div><div class="wbody"><div class="wt">혼자 온 제주</div><div class="wd">힐링 여행</div></div></a>
+        <a class="wcard" href="https://youtu.be/Kn7OSYGoAH0" target="_blank" rel="noopener"><div class="wthumb"><img loading="lazy" src="https://img.youtube.com/vi/Kn7OSYGoAH0/hqdefault.jpg" alt="웨스 앤더슨 스타일 MV"><span class="play"></span></div><div class="wbody"><div class="wt">웨스 앤더슨 스타일 MV</div><div class="wd">대칭 구도 · 파스텔</div></div></a>
+        <a class="wcard" href="https://youtu.be/cteAqGGwDZ4" target="_blank" rel="noopener"><div class="wthumb"><img loading="lazy" src="https://img.youtube.com/vi/cteAqGGwDZ4/hqdefault.jpg" alt="그냥, 옆에"><span class="play"></span></div><div class="wbody"><div class="wt">그냥, 옆에</div><div class="wd">발라드</div></div></a>
+        <a class="wcard" href="https://youtu.be/4V_pfyzVWt4" target="_blank" rel="noopener"><div class="wthumb"><img loading="lazy" src="https://img.youtube.com/vi/4V_pfyzVWt4/hqdefault.jpg" alt="아리랑 2026"><span class="play"></span></div><div class="wbody"><div class="wt">아리랑 2026</div><div class="wd">퓨전국악</div></div></a>
+        <a class="wcard" href="https://youtu.be/M7x6o0pMcHY" target="_blank" rel="noopener"><div class="wthumb"><img loading="lazy" src="https://img.youtube.com/vi/M7x6o0pMcHY/hqdefault.jpg" alt="우리의 새해"><span class="play"></span></div><div class="wbody"><div class="wt">우리의 새해</div><div class="wd">신년 · 위로</div></div></a>
       </div>
-      <p class="work-note">작업 영상이 준비되는 대로 이곳에 담깁니다.</p>
+      <p class="work-note"><a href="https://jejugrapher.com" target="_blank" rel="noopener">더 많은 작업 보기 →</a></p>
     </div>
   </section>
 
